@@ -1,0 +1,35 @@
+#popUpAdd, #candidatesTable{
+    -fx-background-color: radial-gradient(center 10% 10%, radius 100%, rgba(53,64,142,1) 9%, rgba(53,64,128,1) 66%, rgba(80,65,6,0.7) 94%);
+}
+.columns{
+    -fx-background-color: INHERIT;
+}
+.table-view, table-cell{
+    -fx-background-color: black; /* Set cell background color */
+}
+.chart-bar{
+    -fx-bar-fill: #FFD41C;
+}
+.table-view .column-header {
+    -fx-background-color: white; /* Background color */
+    -fx-text-fill: white; /* Text color */
+    -fx-font-weight: bold; /* Font weight */
+    -fx-font-size: 16px; /* Font size */
+    -fx-font-family: 'Arial'; /* Font family */
+    -fx-alignment: center; /* Text alignment */
+}
+
+#popUpAdd .text-field {
+    -fx-background-color: INHERIT;
+    -fx-border-color:  #FFD41C;
+    -fx-text-fill: white;
+    -fx-border-width: 2;
+}
+
+#popUpAdd .button {
+    -fx-background-color: #FFD41C;
+    -fx-font-family: Arial;
+    -fx-font-weight: 700;
+    -fx-text-fill: #35408E;
+    -fx-background-radius: 0;
+}

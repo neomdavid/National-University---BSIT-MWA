@@ -1,0 +1,2 @@
+2023-111300,catapanggm@students.national-u.edu.ph,1234,true,false,false,false,false,false,Already Voted
+2023-000000,davidnm@students.national-u.edu.ph,1234,true,false,false,false,false,false,Already Voted

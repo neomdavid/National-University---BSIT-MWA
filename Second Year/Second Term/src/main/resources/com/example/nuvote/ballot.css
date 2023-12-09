@@ -1,0 +1,13 @@
+.vbox {
+    -fx-background-color:
+        linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.flow-pane {
+    -fx-background-color:
+        linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);
+}

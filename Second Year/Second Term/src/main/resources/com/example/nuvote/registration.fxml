@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nuvote.LandingPageController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0">
+         <left>
+            <VBox alignment="CENTER" prefHeight="400.0" prefWidth="260.0" style="-fx-background-color: #35408E;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="88.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="file:/Users/neodavid/Desktop/NUVote-png/logo-NU.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="62.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/Users/neodavid/Desktop/NUvote-png-2/NUvote.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="National University Voting Platform" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="161.0" text="Register" textFill="WHITE" translateX="-10.0">
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <StackPane>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <TextField fx:id="fldRegisterStudentNum" alignment="CENTER" prefHeight="6.0" prefWidth="132.0" promptText="Student Number" style="-fx-background-color: #FFD41C; -fx-max-width: 190;" styleClass="fldLanding" stylesheets="@sidebar.css">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="9.0" left="20.0" top="9.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </TextField>
+                        <ImageView fitHeight="35.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" translateX="-65.0">
+                           <image>
+                              <Image url="file:/Users/neodavid/Desktop/NUVote-png/icon-user.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+                  <StackPane>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <TextField fx:id="fldRegisterEmail" alignment="CENTER" prefHeight="6.0" prefWidth="132.0" promptText="University Email" style="-fx-background-color: #FFD41C; -fx-max-width: 190;" styleClass="fldLandingEmail" stylesheets="@sidebar.css">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets bottom="9.0" left="20.0" top="9.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </TextField>
+                        <ImageView fitHeight="35.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" translateX="-65.0">
+                           <image>
+                              <Image url="file:/Users/neodavid/Desktop/NUVote-png/icon-email.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+                  <StackPane>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <TextField fx:id="fldRegisterPassword" alignment="CENTER" prefHeight="6.0" prefWidth="132.0" promptText="Password" style="-fx-background-color: #FFD41C; -fx-max-width: 190;" styleClass="fldLanding" stylesheets="@sidebar.css">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="9.0" left="20.0" top="9.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </TextField>
+                        <ImageView fitHeight="35.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" translateX="-65.0">
+                           <image>
+                              <Image url="file:/Users/neodavid/Desktop/NUVote-png/icon-lock.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+                  <Button fx:id="btnRegister" mnemonicParsing="false" onAction="#registerStudent" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: #FFD41C; -fx-background-radius: 50;" styleClass="btnLanding" stylesheets="@sidebar.css">
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/Users/neodavid/Downloads/icon-next-yellow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#switchToAdmin" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #FFD41C;" styleClass="btnLanding" stylesheets="@sidebar.css" text="Admin">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/Users/neodavid/Desktop/NUVote-png/icon-next-blue.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#switchToLandingPage" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #FFD41C;" styleClass="btnLanding" stylesheets="@sidebar.css" text="Return">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/Users/neodavid/Desktop/NUVote-png/icon-next-blue.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="7.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="700.0" fitWidth="741.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/Users/neodavid/Downloads/NEW-NU.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+      <VBox fx:id="paneVerifyPopUp" alignment="CENTER" layoutX="320.0" layoutY="150.0" prefHeight="405.0" prefWidth="567.0" style="-fx-background-color: #35408E; -fx-border-color: #FFD41C; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 10;" visible="false">
+         <children>
+            <Label text="Please verify your university-issued e-mail address" textAlignment="CENTER" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="35.0" />
+               </VBox.margin>
+            </Label>
+            <Label contentDisplay="CENTER" prefHeight="19.0" prefWidth="420.0" text="  We need to verify that it's you. To complete  your registration," textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" prefHeight="19.0" prefWidth="420.0" text="  please enter the code we have just sent  to your Outlook App." textAlignment="CENTER" textFill="WHITE" textOverrun="LEADING_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="25.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="363.0">
+               <children>
+                  <TextField fx:id="fldCode1" alignment="CENTER" prefHeight="65.0" prefWidth="60.0" style="-fx-border-color: #FFD41C; -fx-background-color: INHERIT; -fx-background-radius: 10; -fx-border-radius: 2; -fx-border-width: 3;" styleClass="fldVerify" stylesheets="@sidebar.css">
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="fldCode2" alignment="CENTER" prefHeight="65.0" prefWidth="60.0" style="-fx-border-color: #FFD41C; -fx-background-color: INHERIT; -fx-background-radius: 10; -fx-border-radius: 2; -fx-border-width: 3;" styleClass="fldVerify" stylesheets="@sidebar.css">
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="fldCode3" alignment="CENTER" prefHeight="65.0" prefWidth="60.0" style="-fx-border-color: #FFD41C; -fx-background-color: INHERIT; -fx-background-radius: 10; -fx-border-radius: 2; -fx-border-width: 3;" styleClass="fldVerify" stylesheets="@sidebar.css">
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="fldCode4" alignment="CENTER" prefHeight="65.0" prefWidth="60.0" style="-fx-border-color: #FFD41C; -fx-background-color: INHERIT; -fx-background-radius: 10; -fx-border-radius: 2; -fx-border-width: 3;" styleClass="fldVerify" stylesheets="@sidebar.css">
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="fldCode5" alignment="CENTER" prefHeight="65.0" prefWidth="60.0" style="-fx-border-color: #FFD41C; -fx-background-color: INHERIT; -fx-background-radius: 10; -fx-border-radius: 2; -fx-border-width: 3;" styleClass="fldVerify" stylesheets="@sidebar.css">
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="fldCode6" alignment="CENTER" prefHeight="65.0" prefWidth="60.0" style="-fx-border-color: #FFD41C; -fx-background-color: INHERIT; -fx-background-radius: 10; -fx-border-radius: 2; -fx-border-width: 3;" styleClass="fldVerify" stylesheets="@sidebar.css">
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </TextField>
+               </children>
+            </HBox>
+            <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onAction="#verifyCode" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #FFD41C; -fx-background-radius: 100;">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/Users/neodavid/Downloads/icon-next-yellow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</Pane>

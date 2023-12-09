@@ -1,0 +1,27 @@
+.button{
+    -fx-background-color: #FFD41C;
+    -fx-text-fill: white;
+    -fx-border-radius:0;
+}
+.vbox {
+    -fx-background-color: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);
+}
+
+/* Set the Label's font and text color */
+.labelCandidates {
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 32px;
+    -fx-text-fill: #35408e;
+}
+
+/* Set the Button's styles */
+.button {
+    -fx-font-weight: 900;
+    -fx-font-family: "Arial";
+    -fx-border-color: #35408e;
+    -fx-border-width: 2;
+    -fx-border-radius: 4;
+    -fx-background-radius: 12;
+    -fx-text-fill: #35408e;
+    -fx-background-color: white;
+}

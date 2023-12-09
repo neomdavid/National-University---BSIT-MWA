@@ -1,0 +1,9 @@
+.labelCandidates{
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 32px;
+    -fx-text-fill: #35408E;
+}
+.scroll-pane {
+    -fx-background-color:
+        linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);
+}

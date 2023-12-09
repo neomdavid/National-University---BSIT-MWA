@@ -1,0 +1,11 @@
+.table-view .column-header {
+    -fx-background-color: white; /* Background color */
+    -fx-text-fill: white; /* Text color */
+    -fx-font-weight: bold; /* Font weight */
+    -fx-font-size: 14px; /* Font size */
+    -fx-font-family: 'Arial'; /* Font family */
+    -fx-alignment: center; /* Text alignment */
+    -fx-border-color: black;
+    -fx-border-width: 2;
+
+}

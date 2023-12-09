@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url('path-to-montserrat-font-file.ttf');
+}
+.label{
+ -fx-text-fill: white;
+}
+.sideBarVBox{
+-fx-background-color: radial-gradient(center 10% 10%, radius 100%, rgba(53,64,142,1) 9%, rgba(53,64,128,1) 66%, rgba(80,65,6,0.7) 94%);
+}
+.fldLanding, .btnLanding, .fldLandingEmail{
+    -fx-font-family: "Arial";
+         -fx-text-fill: #35408E; /* Set the font color to red */
+             -fx-font-weight: 900; /* Set the font weight to bold (700) */
+
+  -fx-text-fill: rgba(53, 64, 142, 1);
+  -fx-prompt-text-fill: rgba(53, 64, 142, .8);
+}
+.btnLanding{
+-fx-font-size: 14px;
+}
+.fldVerify{
+    -fx-text-fill:  #FFD41C; /* Set the font color to red */
+    -fx-font-weight: 900;
+    -fx-font-size: 17px;
+}
+.fldLanding{
+    -fx-max-width: 190;
+    -fx-background-color:  #FFD41C;
+        -fx-font-size: 16px;
+
+}
+.fldLandingEmail{
+    -fx-font-size: 14px;
+}
+.btnLanding{
+-fx-background-color:  #FFD41C;
+-fx-background-radius:  13;
+-fx-border-radius: 20;
+}
+.titled-pane{
+     -fx-text-fill: white;
+}
+.titled-pane .title {
+    -fx-background-color: transparent;
+        -fx-font-family: "Agrandir", sans-serif !important;
+        -fx-font-size: 1;
+}
+.titled-pane > .content > .scroll-pane > .viewport {
+    -fx-background-insets: 0 0 0 0 !important;
+}
+.titled-pane {
+    -fx-background-color: transparent;
+}
+.titled-pane > .title > .arrow-button {
+    -fx-graphic: null; /* No arrow image, effectively hides it */
+    -fx-padding: 0; /* Adjust padding as needed */
+    -fx-background-color: transparent; /* Set the background color to transparent */
+}
+.sidebarLabels {
+    -fx-padding: 0 0 0 0; /* Add proper padding values */
+}
+
+.sidebarLabels:hover {
+    -fx-background-color: white;
+    -fx-text-fill: #35408E;
+}

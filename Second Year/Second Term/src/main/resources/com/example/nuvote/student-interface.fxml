@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nuvote.StudentSideController">
+   <children>
+      <VBox layoutX="262.0" layoutY="135.0" prefHeight="517.0" prefWidth="669.0" />
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0">
+         <left>
+            <VBox id="popUpAdd" prefHeight="596.0" prefWidth="190.0" stylesheets="@vicepresident-pane.css" BorderPane.alignment="CENTER">
+               <children>
+                  <TitledPane fx:id="ballot" expanded="false" onMouseClicked="#showBallotPane" prefHeight="16.0" prefWidth="157.0" style="-fx-background-image: none;" stylesheets="@sidebar.css" text="Ballot" textFill="WHITE">
+                     <content>
+                        <VBox prefHeight="152.0" prefWidth="206.0" style="-fx-background-color: radial-gradient(center 10% 10%, radius 100%, rgba(53,64,142,1) 9%, rgba(53,64,128,1) 66%, rgba(80,65,6,0.7) 94%); -fx-border-width: 0;" styleClass="sideBarVBox">
+                           <children>
+                              <Label onMouseClicked="#showPresident" styleClass="sidebarLabels" text="President">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets right="66.0" />
+                                 </padding>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Label>
+                              <Label onMouseClicked="#showVicePresident" styleClass="sidebarLabels" text="Vice President">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Label>
+                              <Label onMouseClicked="#showSecretary" styleClass="sidebarLabels" text="Secretary">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Label>
+                              <Label onMouseClicked="#showTreasurer" styleClass="sidebarLabels" text="Treasurer">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Label>
+                              <Label onMouseClicked="#showPIO" styleClass="sidebarLabels" text="PIO">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Label>
+                              <Label onMouseClicked="#showAuditor" styleClass="sidebarLabels" text="Chief Auditor">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="60.0" top="8.0" />
+                           </padding>
+                           <opaqueInsets>
+                              <Insets bottom="10.0" top="10.0" />
+                           </opaqueInsets>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </VBox>
+                     </content>
+                     <font>
+                        <Font name="Arial Black" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/Users/neodavid/Desktop/NUVote-png/element-ballot.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="3.0" top="3.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </TitledPane>
+                  <TitledPane fx:id="liveTally" expanded="false" onMouseClicked="#showTallyPane" prefHeight="26.0" prefWidth="157.0" stylesheets="@sidebar.css" text="Live Tally" textFill="WHITE">
+                     <content>
+                        <VBox prefHeight="155.0" prefWidth="202.0" style="-fx-background-color: radial-gradient(center 10% 10%, radius 100%, rgba(53,64,142,1) 9%, rgba(53,64,128,1) 66%, rgba(80,65,6,0.7) 94%); -fx-border-width: 0;" styleClass="sideBarVBox">
+                           <children>
+                              <Label onMouseClicked="#showPresidentTally" styleClass="sidebarLabels" text="President">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Label>
+                              <Label onMouseClicked="#showVicePresidentTally" styleClass="sidebarLabels" text="Vice President">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Label>
+                              <Label onMouseClicked="#showSecretaryTally" styleClass="sidebarLabels" text="Secretary">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Label>
+                              <Label onMouseClicked="#showTreasurerTally" styleClass="sidebarLabels" text="Treasurer">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Label>
+                              <Label onMouseClicked="#showPIOTally" styleClass="sidebarLabels" text="PIO">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Label>
+                              <Label onMouseClicked="#showAuditorTally" styleClass="sidebarLabels" text="Chief Auditor">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="60.0" top="8.0" />
+                           </padding>
+                           <opaqueInsets>
+                              <Insets bottom="10.0" />
+                           </opaqueInsets>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </VBox>
+                     </content>
+                     <font>
+                        <Font name="Arial Black" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/Users/neodavid/Desktop/NUVote-png/icon-tally.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="3.0" top="3.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </TitledPane>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </left>
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="1000.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER_LEFT">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="60.0" prefWidth="189.0" style="-fx-background-color: #35408E; -fx-border-color: white;">
+                     <children>
+                        <ImageView fitHeight="61.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/Users/neodavid/Desktop/NUvote-png-2/NUvote%20with%20logo.png" />
+                           </image>
+                        </ImageView>
+                     </children></VBox>
+                  <ImageView fitHeight="37.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/Users/neodavid/Desktop/NUVote-png/icon-menu.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin></ImageView>
+                  <VBox fx:id="containerStudentNum" alignment="CENTER_RIGHT" prefHeight="87.0" prefWidth="159.0">
+                     <HBox.margin>
+                        <Insets left="600.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label fx:id="lblAdmin" onMouseClicked="#showLogOut" text="Student" textFill="#000000dd">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Label>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="29.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/Users/neodavid/Desktop/NUVote-png/icon-gray-user.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="7.0" right="15.0" />
+                     </HBox.margin></ImageView>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <Pane prefHeight="613.0" prefWidth="810.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane fx:id="ballotPane" prefHeight="613.0" prefWidth="810.0" stylesheets="@panes.css" visible="false">
+                     <children>
+                        <VBox fx:id="presidentVBox" alignment="CENTER" prefHeight="641.0" prefWidth="810.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);;" stylesheets="@ballot.css">
+                           <children>
+                              <Label styleClass="labelCandidates" stylesheets="@ballot.css" text="President" textFill="#35408e">
+                                 <font>
+                                    <Font name="Arial Black" size="32.0" />
+                                 </font></Label>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="453.0" prefWidth="543.0" style="-fx-background-color: transparent;" stylesheets="@ballot.css">
+                                 <content>
+                                    <FlowPane fx:id="presidentFlowPane" prefHeight="519.0" prefWidth="711.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);;" stylesheets="@ballot.css">
+                                       <children>
+                                          <VBox fx:id="vBoxLayout" alignment="CENTER" prefHeight="0.0" prefWidth="0.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(255, 212, 28, 1) 66%, rgba(255, 255, 255, 1) 94%); -fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 4; -fx-background-radius: 8; -fx-min-width: 162; -fx-min-height: 224;">
+                                             <children>
+                                                <Label fx:id="lblName" alignment="TOP_LEFT" prefHeight="0.0" style="-fx-background-color: #35408E; -fx-border-color: white; -fx-border-width: 2; -fx-max-width: 140; -fx-min-height: 30; -fx-alignment: center;" text="Candidate Name" textFill="WHITE">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Arial Bold" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lblParty" alignment="CENTER" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #35408E; -fx-border-color: white; -fx-border-width: 2;" text="Party" textFill="WHITE">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Arial Bold" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lblCourse" alignment="CENTER" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #35408E; -fx-border-color: white; -fx-border-width: 2;" text="Course" textFill="WHITE">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Arial Bold" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button fx:id="btnSelectCandidate" mnemonicParsing="false" style="-fx-background-color: white; -fx-border-color: #35408E; -fx-border-width: 1; -fx-background-radius: 9; -fx-border-radius: 5;" text="Select Candidate" textFill="#35408e">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Arial" size="11.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </FlowPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="vicePresidentVBox" alignment="CENTER" prefHeight="641.0" prefWidth="810.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);" stylesheets="@ballot.css" visible="false">
+                           <children>
+                              <Label styleClass="labelCandidates" stylesheets="@ballot.css" text="Vice President">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font></Label>
+                              <ScrollPane prefHeight="453.0" prefWidth="543.0" style="-fx-background-color: transparent;" stylesheets="@ballot.css">
+                                 <content>
+                                    <FlowPane fx:id="vicePresidentFlowPane" prefHeight="519.0" prefWidth="711.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);">
+                                       <children>
+                                          <VBox fx:id="vBoxLayout1" alignment="CENTER" prefHeight="224.0" prefWidth="162.0">
+                                             <children>
+                                                <Label fx:id="lblName1" text="Candidate Name">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="lblParty1" text="Party">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="lblCourse1" text="Course">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Button fx:id="btnSelectCandidate1" mnemonicParsing="false" text="Select Candidate">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </FlowPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="secretaryVBox" alignment="CENTER" prefHeight="641.0" prefWidth="810.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);" stylesheets="@ballot.css" visible="false">
+                           <children>
+                              <Label styleClass="labelCandidates" stylesheets="@ballot.css" text="Secretary">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Label>
+                              <ScrollPane prefHeight="453.0" prefWidth="543.0" style="-fx-background-color: transparent;" stylesheets="@ballot.css">
+                                 <content>
+                                    <FlowPane fx:id="secretaryFlowPane" prefHeight="519.0" prefWidth="711.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);">
+                                       <children>
+                                          <VBox fx:id="vBoxLayout11" alignment="CENTER" prefHeight="224.0" prefWidth="162.0">
+                                             <children>
+                                                <Label fx:id="lblName11" text="Candidate Name">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="lblParty11" text="Party">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="lblCourse11" text="Course">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Button fx:id="btnSelectCandidate11" mnemonicParsing="false" text="Select Candidate">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </FlowPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="treasurerVBox" alignment="CENTER" prefHeight="641.0" prefWidth="810.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);" stylesheets="@ballot.css" visible="false">
+                           <children>
+                              <Label styleClass="labelCandidates" stylesheets="@ballot.css" text="Treasurer">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font></Label>
+                              <ScrollPane prefHeight="453.0" prefWidth="543.0" style="-fx-background-color: transparent;" stylesheets="@ballot.css">
+                                 <content>
+                                    <FlowPane fx:id="treasurerFlowPane" prefHeight="519.0" prefWidth="711.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);">
+                                       <children>
+                                          <VBox fx:id="vBoxLayout111" alignment="CENTER" prefHeight="224.0" prefWidth="162.0">
+                                             <children>
+                                                <Label fx:id="lblName111" text="Candidate Name">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="lblParty111" text="Party">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="lblCourse111" text="Course">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Button fx:id="btnSelectCandidate111" mnemonicParsing="false" text="Select Candidate">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </FlowPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="PIOVBox" alignment="CENTER" prefHeight="641.0" prefWidth="810.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);" stylesheets="@ballot.css" visible="false">
+                           <children>
+                              <Label styleClass="labelCandidates" stylesheets="@ballot.css" text="Public Information Officer">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font></Label>
+                              <ScrollPane prefHeight="453.0" prefWidth="543.0" style="-fx-background-color: transparent;" stylesheets="@ballot.css">
+                                 <content>
+                                    <FlowPane fx:id="PIOFlowPane" prefHeight="519.0" prefWidth="711.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);">
+                                       <children>
+                                          <VBox fx:id="vBoxLayout1111" alignment="CENTER" prefHeight="224.0" prefWidth="162.0">
+                                             <children>
+                                                <Label fx:id="lblName1111" text="Candidate Name">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="lblParty1111" text="Party">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="lblCourse1111" text="Course">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Button fx:id="btnSelectCandidate1111" mnemonicParsing="false" text="Select Candidate">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </FlowPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="auditorVBox" alignment="CENTER" prefHeight="641.0" prefWidth="810.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);" stylesheets="@ballot.css" visible="false">
+                           <children>
+                              <Label styleClass="labelCandidates" stylesheets="@ballot.css" text="Chief Auditor">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font></Label>
+                              <ScrollPane prefHeight="453.0" prefWidth="543.0" style="-fx-background-color: transparent;" stylesheets="@ballot.css">
+                                 <content>
+                                    <FlowPane fx:id="auditorFlowPane" prefHeight="519.0" prefWidth="711.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);">
+                                       <children>
+                                          <VBox fx:id="vBoxLayout1112" alignment="CENTER" prefHeight="224.0" prefWidth="162.0">
+                                             <children>
+                                                <Label fx:id="lblName1112" text="Candidate Name">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="lblParty1112" text="Party">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="lblCourse1112" text="Course">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Button fx:id="btnSelectCandidate1112" mnemonicParsing="false" text="Select Candidate">
+                                                   <VBox.margin>
+                                                      <Insets bottom="13.0" />
+                                                   </VBox.margin>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </FlowPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="tallyPane" prefHeight="613.0" prefWidth="810.0" stylesheets="@panes.css">
+                     <children>
+                        <VBox fx:id="presidentTally" alignment="CENTER" layoutX="-2.0" prefHeight="640.0" prefWidth="810.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);">
+                           <children>
+                              <Label styleClass="labelCandidates" text="President Election" textFill="#35408e">
+                                 <font>
+                                    <Font name="Arial Black" size="32.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <BarChart fx:id="chartPresident" alternativeRowFillVisible="false" barGap="10.0" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" prefHeight="400.0" prefWidth="586.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%); -fx-region-background: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);" stylesheets="@vicepresident-pane.css" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </BarChart>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="vicePresidentTally" alignment="CENTER" prefHeight="640.0" prefWidth="810.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);" visible="false">
+                           <children>
+                              <Label styleClass="labelCandidates" text="Vice President Election">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <BarChart fx:id="chartVicePresident" alternativeRowFillVisible="false" barGap="10.0" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" prefHeight="400.0" prefWidth="586.0" stylesheets="@vicepresident-pane.css" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </BarChart>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="secretaryTally" alignment="CENTER" prefHeight="640.0" prefWidth="810.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);" visible="false">
+                           <children>
+                              <Label styleClass="labelCandidates" text="Secretary Election">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <BarChart fx:id="chartSecretary" alternativeRowFillVisible="false" barGap="10.0" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" prefHeight="400.0" prefWidth="586.0" stylesheets="@vicepresident-pane.css" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </BarChart>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="treasurerTally" alignment="CENTER" prefHeight="640.0" prefWidth="810.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);" visible="false">
+                           <children>
+                              <Label styleClass="labelCandidates" text="Treasurer Election">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <BarChart fx:id="chartTreasurer" alternativeRowFillVisible="false" barGap="10.0" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" prefHeight="400.0" prefWidth="586.0" stylesheets="@vicepresident-pane.css" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </BarChart>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="PIOTally" alignment="CENTER" prefHeight="640.0" prefWidth="810.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);" visible="false">
+                           <children>
+                              <Label styleClass="labelCandidates" text="Public Information Officer Election">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <BarChart fx:id="chartPIO" alternativeRowFillVisible="false" barGap="10.0" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" prefHeight="400.0" prefWidth="586.0" stylesheets="@vicepresident-pane.css" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </BarChart>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="auditorTally" alignment="CENTER" prefHeight="640.0" prefWidth="810.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(166, 166, 166, 1) 66%, rgba(255, 255, 255, 1) 94%);" visible="false">
+                           <children>
+                              <Label styleClass="labelCandidates" text="Chief Auditor Election">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <BarChart fx:id="chartAuditor" alternativeRowFillVisible="false" barGap="10.0" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" prefHeight="400.0" prefWidth="586.0" stylesheets="@vicepresident-pane.css" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </BarChart>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+      <Button fx:id="popLogOut" layoutX="845.0" layoutY="65.0" mnemonicParsing="false" onAction="#logOut" prefHeight="46.0" prefWidth="147.0" style="-fx-background-color: GRAY;" text="Log-out" textFill="WHITE" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+   </children>
+</Pane>
