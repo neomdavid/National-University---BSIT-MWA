@@ -9,14 +9,14 @@ _NUVote was developed as the culmination of our work in the Data Structures and 
 ## B. Project Objective
   The project aims to provide a seamless and secure administration of the electoral process within the university, with a specific emphasis on student government elections. It outlines the following key objectives:
 
-1. ### Voter Anonymity and Privacy Protection
+1. **Voter Anonymity and Privacy Protection**
   Ensure the concealment of voter identity and protection of their privacy, allowing them to express preferences without fear of exposure.
 
-2. ### Candidate Voting and Position Display
+2. **Candidate Voting and Position Display**
   Enable users to cast votes for desired candidates while displaying available positions and the candidates running for each position.
 
-3. ### User-Friendly Interface
+3. **User-Friendly Interface**
   Develop a user-friendly interface promoting easy navigation and increasing student participation in the electoral process.
 
-4. ### Unique University-Issued Account Creation
+4. **Unique University-Issued Account Creation**
   Utilize students' unique university-issued student numbers as the basis for account creation, restricting external access and ensuring fairness in the election process for all candidates.
