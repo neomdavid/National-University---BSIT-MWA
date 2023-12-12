@@ -4,9 +4,9 @@ _NUVote was developed as the culmination of our work in the Data Structures and 
 # NUVote: Student Government Election Voting System
 
 ## A. General Description
-  NUVote is a specialized voting platform designed explicitly for student government elections at National University-Manila. While akin to other online voting systems in managing elections, NUVote uniquely incorporates robust security measures. Its design ensures exclusive access for university students, safeguarding election integrity and addressing related issues. The system implements data structures such as hashing and arrays, with the user interface created using Canva.
+  **NUVote** is a specialized voting platform designed explicitly for student government elections at National University-Manila. While akin to other online voting systems in managing elections, NUVote uniquely incorporates robust security measures. Its design ensures exclusive access for university students, safeguarding election integrity and addressing related issues. The system implements data structures such as hashing and arrays, with the user interface created using Canva.
 
-## B. Project Objective
+## B. Project Objectives
   The project aims to provide a seamless and secure administration of the electoral process within the university, with a specific emphasis on student government elections. It outlines the following key objectives:
 
 1. **Voter Anonymity and Privacy Protection**
